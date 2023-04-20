@@ -7,10 +7,18 @@ labels:
   - label: bug
     branch: ^bugfix\/
 
+  - label: chore
+    branch: ^chore\/
+
   - label: dependencies
     files:
       - ^poetry\.lock$
       - ^Pipfile\.lock$
+
+  - label: documentation
+    files:
+      - ^docs/.+$
+      - ^.+\.md$
 
   - label: enhancement
     branch: ^feature\/
