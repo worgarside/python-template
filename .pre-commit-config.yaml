@@ -1,5 +1,10 @@
 ---
 repos:
+  # - repo: https://github.com/worgarside/pre-commit-hooks-dependency-sync
+  #   rev: 1.0.0
+  #   hooks:
+  #     - id: sync-additional-dependencies
+
   - repo: https://github.com/asottile/pyupgrade
     rev: v3.14.0
     hooks:
@@ -17,6 +22,7 @@ repos:
     rev: 1.16.0
     hooks:
       - id: blacken-docs
+
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.4.0
     hooks:
@@ -48,7 +54,6 @@ repos:
         args:
           - -a
           - from __future__ import annotations
-
 
   - repo: https://github.com/jumanjihouse/pre-commit-hook-yamlfmt
     rev: 0.2.3
@@ -114,6 +119,7 @@ repos:
         types:
           - python
         additional_dependencies:
+          - pylint
           - pylint-strict-informational
 
   - repo: https://github.com/pre-commit/pygrep-hooks
