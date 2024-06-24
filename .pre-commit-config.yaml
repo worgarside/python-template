@@ -6,7 +6,7 @@ repos:
   #     - id: sync-additional-dependencies
 
   - repo: https://github.com/asottile/pyupgrade
-    rev: v3.15.2
+    rev: v3.16.0
     hooks:
       - id: pyupgrade
         args:
@@ -130,7 +130,7 @@ repos:
       - id: python-check-mock-methods
 
   - repo: https://github.com/codespell-project/codespell
-    rev: v2.2.6
+    rev: v2.3.0
     hooks:
       - id: codespell
         additional_dependencies:
@@ -140,6 +140,6 @@ repos:
           - '*.svg,*.json'
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.4.4
+    rev: v0.4.10
     hooks:
       - id: ruff
