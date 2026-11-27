@@ -8,13 +8,15 @@ on:
       - opened
       - reopened
       - synchronize
+      - ready_for_review
 
 jobs:
   ci-validation:
     name: 'CI: Validation'
-    uses: worgarside/github-config-files/.github/workflows/__ci_validation.yml@main
+    if: github.event_name != 'pull_request' || !github.event.pull_request.draft
+    uses: worganisation/github-config-files/.github/workflows/__ci-validation.yml@0.14.2
     with:
-      build-branch: ${{ github.ref }}
+      build-branch: '${{ github.ref }}'
       build-type: ''
       node-build-directory: ''
       python-version: '3.12'
